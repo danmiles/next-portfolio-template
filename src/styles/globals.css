@@ -4,23 +4,23 @@
   /* Global color and fonts*/
   --main-font: 'Inter', sans-serif;
   --second-font: 'Inter', sans-serif;
-  --primary-color: #ffb400;
+  --primary-color: #00ac0b;
   --bg-nav-color: #171c48;
   --bg-color-1: #24263b;
   --bg-color-section: #1f2235;
   --link: #05a41b;
-  --hover: #ff1b02;
-  --text: #ffffff;
-  --text-font-size: 18px;
+  --hover: #2436dc;
+  --text: #e9e0e0;
+  --font-size: 18px;
   --white: #ffffff;
   --transition: all 0.3s ease;
 }
 
 body {
-  font-size: var(--text-font-size);
+  font-size: var(--font-size);
+  background-color: var(--bg-color-1);
   color: var(--text);
   font-family: var(--main-font);
-  background-color: var(--bg-color-1);
   line-height: 1.4;
   min-width: 320px;
   position: relative;
@@ -32,20 +32,16 @@ body {
 
 
 .container {
-  max-width: 1310px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 15px;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1440px) {
   .container {
-    max-width: 90%;
+    max-width: 1200px;
   }
 }
-@media only screen and (max-width: 992px) {
-  .container {
-    max-width: 100%;
-  }
-}
+
 
 *,
 *::before,
@@ -91,7 +87,7 @@ button {
   cursor: pointer;
   outline: none !important;
   background-color: transparent;
-  font-size: var(--text-font-size);
+  font-size: var(--font-size);
 }
 
 ::selection {
@@ -101,6 +97,7 @@ button {
 
 /* ======== button-main --- start ======== */
 .button-main {
+  border-radius: 15px;
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -109,13 +106,12 @@ button {
   z-index: 2;
   background-color: var(--primary-color);
   transition: var(--transition);
-  color: black;
+  color: var(--text);
   padding: 15px 28px;
   font-size: 18px;
   font-weight: 600;
 }
 .button-main:hover {
-  color: var(--text);
   background-color: var(--hover);
 }
 /* ======== button-main --- end ======== */

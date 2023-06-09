@@ -1,6 +1,8 @@
+'use client';
 import React from 'react';
 import Link from 'next/link';
 import styles from '@/styles/navbar.module.css';
+import Image from 'next/image';
 
 const Navbar = () => {
   const links = [
@@ -37,16 +39,26 @@ const Navbar = () => {
   ];
 
   return (
-    <nav>
-      <ul className={styles.navbar}>
-        {links.map((link) => {
-          return (
-            <li key={link.id}>
-              <Link href={link.url}>{link.title}</Link>
-            </li>
-          );
-        })}
-      </ul>
+    <nav className={styles.navbar}>
+      <div className="container">
+        <ul className={styles.navbarList}>
+          <Link href="/">
+            <Image src="images/vercel.svg" width={80} height={30} alt="logo" />
+          </Link>
+          <div className={styles.navbarMenu}>
+            {links.map((link) => {
+              return (
+                <li key={link.id}>
+                  <Link className={styles.navbarLink} href={link.url}>
+                    {link.title}
+                  </Link>
+                </li>
+              );
+            })}
+            <button className='button-main' onClick={() => console.log('logout')}>Logout</button>
+          </div>
+        </ul>
+      </div>
     </nav>
   );
 };
