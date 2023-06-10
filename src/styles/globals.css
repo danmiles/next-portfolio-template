@@ -4,13 +4,12 @@
   /* Global color and fonts*/
   --main-font: 'Inter', sans-serif;
   --second-font: 'Inter', sans-serif;
-  --primary-color: #00ac0b;
-  --bg-nav-color: #171c48;
-  --bg-color-1: #24263b;
+  --primary-color: #1ab769;
+  --bg-color-1: #191a25;
   --bg-color-section: #1f2235;
-  --link: #05a41b;
-  --hover: #2436dc;
-  --text: #e9e0e0;
+  --link: #1ab769;
+  --hover: #24d3dc;
+  --text: #bbbbbb;
   --font-size: 18px;
   --white: #ffffff;
   --transition: all 0.3s ease;
@@ -97,7 +96,7 @@ button {
 
 /* ======== button-main --- start ======== */
 .button-main {
-  border-radius: 15px;
+  border-radius: 10px;
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -106,12 +105,13 @@ button {
   z-index: 2;
   background-color: var(--primary-color);
   transition: var(--transition);
-  color: var(--text);
-  padding: 15px 28px;
-  font-size: 18px;
-  font-weight: 600;
+  color: var(--white);
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
 }
 .button-main:hover {
   background-color: var(--hover);
+  color: #17171e;
 }
 /* ======== button-main --- end ======== */

@@ -1,12 +1,14 @@
-import React from 'react'
+import React from 'react';
 import styles from '@/styles/footer.module.css';
 
 const Footer = () => {
   // get current year
-  const year = new Date().getFullYear()
+  const year = new Date().getFullYear();
   return (
-    <div>&copy;{year} - Next.js 13 portfolio</div>
-  )
-}
+    <footer className={styles.footer}>
+      <p className={styles.text}>&copy;{year} - Next.js 13 portfolio</p>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;

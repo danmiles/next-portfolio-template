@@ -41,21 +41,30 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className="container">
-        <ul className={styles.navbarList}>
-          <Link href="/">
-            <Image src="images/vercel.svg" width={80} height={30} alt="logo" />
-          </Link>
-          <div className={styles.navbarMenu}>
+        <ul className={styles.list}>
+          <div className={styles.logo}>
+            <Link href="/">
+              <Image src="images/logo.svg" width={40} height={40} alt="logo" />
+            </Link>
+            <h2>JsCase</h2>
+          </div>
+
+          <div className={styles.menu}>
             {links.map((link) => {
               return (
                 <li key={link.id}>
-                  <Link className={styles.navbarLink} href={link.url}>
+                  <Link className={styles.link} href={link.url}>
                     {link.title}
                   </Link>
                 </li>
               );
             })}
-            <button className='button-main' onClick={() => console.log('logout')}>Logout</button>
+            <button
+              className="button-main"
+              onClick={() => console.log('logout')}
+            >
+              Logout
+            </button>
           </div>
         </ul>
       </div>
