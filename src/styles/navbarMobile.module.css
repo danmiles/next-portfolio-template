@@ -12,32 +12,39 @@
 }
 
 .menuMobile {
-  position: absolute;
+  position: fixed;
   visibility: hidden;
-  top: -15px;
-  right: -15px;
-  width: 0;
-  height: 100vh;
-  background-color: #2b2424;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  top: 0;
+  right: 0;
+  z-index: 999;
+  transform: translateX(100%);
   z-index: 2;
   transition: all 0.3s ease-in-out;
 }
 .menuMobile.open {
   visibility: visible;
-  width: 300px; 
+  transform: translateX(0);
 }
 
-
-
 .menuList {
+  visibility: hidden;
+  opacity: 0;
+  background-color: #2b2424;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  height: 100vh;
   display: flex;
   gap: 15px;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 20px;
+  flex-direction: column;  
+  padding-top: 40px;
   padding-left: 15px;
-  width: 300px;  
+  width: 300px;
+  transition: all 0.5s ease-in-out;
+}
+
+.open .menuList {
+  visibility: visible;
+  opacity: 1;
 }
 
 .buttonMobile {
@@ -50,8 +57,6 @@
   background-color: var(--primary-color);
   color: var(--white);
 }
-
-
 
 @media only screen and (max-width: 992px) {
   .navbarMobile {
