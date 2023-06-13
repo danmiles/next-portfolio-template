@@ -1,3 +1,17 @@
 .hero {
   /* display: none; */
 }
+
+.content {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+}
+
+.title {
+  font-size: 72px;
+  line-height: 1.2;
+  background: linear-gradient(to bottom, #1ab769, #bbb);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
