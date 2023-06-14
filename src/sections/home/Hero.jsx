@@ -2,6 +2,7 @@ import React from 'react';
 import styles from '@/styles/home-page/hero.module.css';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { overturnFadeIn } from '@/data/motionData';
 
 const Hero = () => {
   const line1 = 'Front-End Insights: Harnessing the Power of Design ';
@@ -62,16 +63,20 @@ const Hero = () => {
               Next 13 is a revolutionary software solution that offers a wide
               range of benefits to businesses and individuals alike. With Next
               13, you can streamline your operations, enhance productivity, and
-              stay ahead of the competition. 
+              stay ahead of the competition.
             </p>
           </div>
           <div className={styles.right}>
-            <Image
-              src="/images/home-page/hero-image.png"
-              alt="hero image"
-              width={600}
-              height={600}
-            />
+            <motion.div
+              variants={overturnFadeIn('left')}              
+            >
+              <Image
+                src="/images/home-page/hero-image.png"
+                alt="hero image"
+                width={600}
+                height={600}
+              />
+            </motion.div>
           </div>
         </div>
       </div>
