@@ -36,10 +36,21 @@
   display: flex;
   gap: 15px;
   flex-direction: column;  
-  padding-top: 40px;
+  padding-top: 50px;
   padding-left: 15px;
   width: 300px;
   transition: all 0.5s ease-in-out;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;  
+}
+
+.logoTitle {
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .open .menuList {

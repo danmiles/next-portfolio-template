@@ -30,52 +30,52 @@ const Hero = () => {
 
   return (
     <section className={styles.hero}>
-      <div className="container">
-        <div className={styles.content}>
-          <div className={styles.left}>
-            <motion.h1
-              className={styles.title}
-              variants={sentence}
-              initial="hidden"
-              animate="visible"
-            >
-              {line1.split('').map((char, index) => {
-                return (
-                  <motion.span key={char + '-' + index} variants={letter}>
-                    {char}
-                  </motion.span>
-                );
-              })}
-              <br />
-              {line2.split('').map((char, index) => {
-                return (
-                  <motion.span key={char + '-' + index} variants={letter}>
-                    {char}
-                  </motion.span>
-                );
-              })}
-            </motion.h1>
-            <div className={styles.description}>
-              <p>
-                We are a team of passionate designers and developers who are
-                dedicated to delivering the best possible solutions for our
-                clients.
-              </p>
-              <p>
-                Next 13 is a revolutionary software solution that offers a wide
-                range of benefits to businesses and individuals alike. With Next
-                13, you can streamline your operations, enhance productivity,
-                and stay ahead of the competition.
-              </p>
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+      >
+        <div className="container">
+          <div className={styles.content}>
+            <div className={styles.left}>
+              <motion.h1
+                className={styles.title}
+                variants={sentence}
+                initial="hidden"
+                animate="visible"
+              >
+                {line1.split('').map((char, index) => {
+                  return (
+                    <motion.span key={char + '-' + index} variants={letter}>
+                      {char}
+                    </motion.span>
+                  );
+                })}
+                <br />
+                {line2.split('').map((char, index) => {
+                  return (
+                    <motion.span key={char + '-' + index} variants={letter}>
+                      {char}
+                    </motion.span>
+                  );
+                })}
+              </motion.h1>
+              <div className={styles.description}>
+                <p>
+                  We are a team of passionate designers and developers who are
+                  dedicated to delivering the best possible solutions for our
+                  clients.
+                </p>
+                <p>
+                  Next 13 is a revolutionary software solution that offers a
+                  wide range of benefits to businesses and individuals alike.
+                  With Next 13, you can streamline your operations, enhance
+                  productivity, and stay ahead of the competition.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className={styles.right}>
-            <motion.div
-              variants={staggerContainer(0.5, 0.5)}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: false, amount: 0.25 }}
-            >
+            <div className={styles.right}>
               <motion.div variants={overturnFadeIn('right')}>
                 <Image
                   src="/images/home-page/hero-image.png"
@@ -84,12 +84,12 @@ const Hero = () => {
                   height={600}
                 />
               </motion.div>
-            </motion.div>
+            </div>
           </div>
+          {/* end content */}
         </div>
-        {/* end content */}
-      </div>
-      {/* end container */}
+        {/* end container */}
+      </motion.div>
     </section>
   );
 };

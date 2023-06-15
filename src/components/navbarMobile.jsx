@@ -51,6 +51,14 @@ const NavbarMobile = () => {
 
       <div className={`${styles.menuMobile} ${isOpen ? `${styles.open}` : ''}`}>
         <ul className={styles.menuList}>
+          {/* Logo */}
+          <div className={styles.logo}>
+            <Link href="/">
+              <Image src="images/logo.svg" width={35} height={35} alt="logo" />
+            </Link>
+            <h2 className={styles.logoTitle}>JsCase</h2>
+          </div>
+          {/* Menu links */}
           {navbarLinks.map((link) => {
             return (
               <li key={link.id} className={styles.item}>
@@ -58,6 +66,7 @@ const NavbarMobile = () => {
               </li>
             );
           })}
+          {/* logout button */}
           <button
             className={styles.buttonMobile}
             onClick={() => console.log('logout')}
