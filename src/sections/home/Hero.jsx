@@ -82,6 +82,7 @@ const Hero = () => {
                   alt="hero image"
                   width={600}
                   height={600}
+                  className={styles.heroImage}
                 />
               </motion.div>
             </div>
