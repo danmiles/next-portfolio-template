@@ -94,7 +94,7 @@ button {
 
 ::selection {
   color: var(--text);
-  background: var(--primary-color);
+  background-color: #1e6a44;
 }
 
 /* ======== button-main --- start ======== */

@@ -1,8 +1,9 @@
+'use client';
 import React from 'react';
 import styles from '@/styles/home-page/hero.module.css';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { overturnFadeIn } from '@/data/motionData';
+import { overturnFadeIn, fadeIn } from '@/data/motionData';
 
 const Hero = () => {
   const line1 = 'Front-End Insights: Harnessing the Power of Design ';
@@ -67,9 +68,7 @@ const Hero = () => {
             </p>
           </div>
           <div className={styles.right}>
-            <motion.div
-              variants={overturnFadeIn('left')}              
-            >
+            <motion.div variants={overturnFadeIn('right')}>
               <Image
                 src="/images/home-page/hero-image.png"
                 alt="hero image"
@@ -80,6 +79,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      {/* end container */}
     </section>
   );
 };
