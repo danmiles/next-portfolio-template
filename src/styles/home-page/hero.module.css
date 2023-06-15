@@ -1,5 +1,6 @@
 .hero {
   padding-top: 150px;
+  height: 4000px;
 }
 
 .content {
@@ -18,8 +19,9 @@
 }
 
 .description {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.5;
-  margin-bottom: 60px;
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }

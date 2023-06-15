@@ -3,7 +3,7 @@ import React from 'react';
 import styles from '@/styles/home-page/hero.module.css';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { overturnFadeIn, fadeIn } from '@/data/motionData';
+import { overturnFadeIn, staggerContainer, fadeIn } from '@/data/motionData';
 
 const Hero = () => {
   const line1 = 'Front-End Insights: Harnessing the Power of Design ';
@@ -14,8 +14,8 @@ const Hero = () => {
     visible: {
       opacity: 1,
       transition: {
-        delay: 0.5,
-        staggerChildren: 0.08,
+        delay: 0.2,
+        staggerChildren: 0.05,
       },
     },
   };
@@ -55,29 +55,39 @@ const Hero = () => {
                 );
               })}
             </motion.h1>
-            <p className={styles.description}>
-              We are a team of passionate designers and developers who are
-              dedicated to delivering the best possible solutions for our
-              clients.
-            </p>
-            <p className={styles.description}>
-              Next 13 is a revolutionary software solution that offers a wide
-              range of benefits to businesses and individuals alike. With Next
-              13, you can streamline your operations, enhance productivity, and
-              stay ahead of the competition.
-            </p>
+            <div className={styles.description}>
+              <p>
+                We are a team of passionate designers and developers who are
+                dedicated to delivering the best possible solutions for our
+                clients.
+              </p>
+              <p>
+                Next 13 is a revolutionary software solution that offers a wide
+                range of benefits to businesses and individuals alike. With Next
+                13, you can streamline your operations, enhance productivity,
+                and stay ahead of the competition.
+              </p>
+            </div>
           </div>
           <div className={styles.right}>
-            <motion.div variants={overturnFadeIn('right')}>
-              <Image
-                src="/images/home-page/hero-image.png"
-                alt="hero image"
-                width={600}
-                height={600}
-              />
+            <motion.div
+              variants={staggerContainer(0.5, 0.5)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.25 }}
+            >
+              <motion.div variants={overturnFadeIn('right')}>
+                <Image
+                  src="/images/home-page/hero-image.png"
+                  alt="hero image"
+                  width={600}
+                  height={600}
+                />
+              </motion.div>
             </motion.div>
           </div>
         </div>
+        {/* end content */}
       </div>
       {/* end container */}
     </section>

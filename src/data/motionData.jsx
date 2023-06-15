@@ -1,3 +1,13 @@
+export const staggerContainer = (staggerChildren, delayChildren) => ({
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren,
+      delayChildren,
+    },
+  },
+});
+
 export const overturnFadeIn = (direction) => ({
   hidden: {
     x: direction === 'left' ? '-100%' : '100%',
