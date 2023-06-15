@@ -5,7 +5,7 @@ import styles from '@/styles/navbar.module.css';
 import Image from 'next/image';
 import { navbarLinks } from '@/data/constData';
 
-import NavbarMobile from './navbarMobile';
+import NavbarMobile from './NavbarMobile';
 
 const Navbar = () => {
   return (

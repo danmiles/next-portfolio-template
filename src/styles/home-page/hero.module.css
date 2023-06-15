@@ -1,5 +1,4 @@
 .hero {
-  padding-top: 150px;
   height: 4000px;
 }
 
@@ -28,7 +27,7 @@
 
 @media only screen and (max-width: 1400px) {
   .hero {
-    padding-top: 100px;
+    padding-top: none;
   }
 
   .content {
@@ -46,24 +45,24 @@
 }
 
 @media only screen and (max-width: 1100px) {
-
   .content {
     flex-direction: column;
     gap: 50px;
   }
 
- 
-
   .heroImage {
-    display: none;
     max-width: 600px;
     max-height: 600px;
+  }
+
+  .title {
+    font-size: 45px;
+    margin-bottom: 30px;
   }
 }
 
 @media only screen and (max-width: 500px) {
   .heroImage {
-    display: none;
     max-width: 350px;
     max-height: 350px;
   }
@@ -72,6 +71,3 @@
     font-size: 40px;
   }
 }
-
-
-
