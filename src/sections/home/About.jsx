@@ -13,28 +13,38 @@ const About = () => {
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.25 }}
+        viewport={{ once: false, amount: 0.25 }}
       >
         <div className="container">
-          <TitleText
-            stylesClass="section-title"
-            title="| About Us"
-          />
 
           <div className={styles.content}>
             <div className={styles.left}>
-              <motion.div variants={fadeIn('right')}>
-              <Image
-                src="/images/home-page/about-us.webp"
-                alt="about image"
-                width={600}
-                height={600}
-                className={styles.aboutImage}
-              />
+              <motion.div
+                type="spring"
+                variants={fadeIn('right')}
+                whileHover={{
+                  scale: 1.05,
+                }}
+              >
+                <Image
+                  src="/images/home-page/about-us.webp"
+                  alt="about image"
+                  width={600}
+                  height={600}
+                  className={styles.aboutImage}
+                />
               </motion.div>
-
+            </div>
+            <div className={styles.right}>
+              <TitleText stylesClass="section-title" title="| About Us" />
+              <h3 className={styles.subtitle}>
+                JsCase is a software development company that provides
+                high-quality software development services to its clients
+                worldwide.
+              </h3>
+            </div>
           </div>
-          </div>
+          {/* end content */}
         </div>
         {/* end container */}
       </motion.div>

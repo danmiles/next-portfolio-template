@@ -1,0 +1,12 @@
+.content {
+  display: flex;
+  gap: 100px;
+}
+
+.subtitle {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: var(--text);
+  line-height: 1.7;
+}
