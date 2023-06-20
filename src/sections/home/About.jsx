@@ -20,7 +20,11 @@ const About = () => {
         <div className="container">
           <div className={styles.content}>
             <div className={styles.left}>
-              <motion.div variants={overturnFadeIn('left')}>
+              <motion.div
+                variants={overturnFadeIn('left')}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
                 <Image
                   src="/images/home-page/about/about-us.webp"
                   alt="about image"
@@ -31,7 +35,10 @@ const About = () => {
               </motion.div>
             </div>
             <div className={styles.right}>
-              <motion.div variants={fadeIn('left','tween', 0, 1)} className={styles.title}>
+              <motion.div
+                variants={fadeIn('left', 'spring', 0, 1)}
+                className={styles.title}
+              >
                 <TypingText stylesClass="section-title" text="| About Us" />
                 <h3 className={styles.subtitle}>
                   JsCase is a software development company that provides
@@ -54,8 +61,8 @@ const About = () => {
                   })}
                 </ul>
                 <p className={styles.text}>
-                  So let's go on this wonderful digital adventure together.
-                  And we will bring your project to new heights and successes.
+                  So let's go on this wonderful digital adventure together. And
+                  we will bring your project to new heights and successes.
                 </p>
               </motion.div>
             </div>
