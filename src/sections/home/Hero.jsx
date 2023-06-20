@@ -40,8 +40,8 @@ const Hero = () => {
                 <Image
                   src="/images/home-page/hero/hero-image.png"
                   alt="hero image"
-                  width={600}
-                  height={600}
+                  width={500}
+                  height={500}
                   className={styles.heroImage}
                 />
               </motion.div>
