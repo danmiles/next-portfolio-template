@@ -36,7 +36,7 @@ const About = () => {
             </div>
             <div className={styles.right}>
               <motion.div
-                variants={fadeIn('left', 'spring', 0, 1)}
+                variants={fadeIn('left', 'tween', 0.2, 1)}
                 className={styles.title}
               >
                 <TypingText stylesClass="section-title" text="| About Us" />
