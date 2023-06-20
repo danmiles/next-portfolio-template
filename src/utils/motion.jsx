@@ -35,14 +35,13 @@ export const fadeIn = (direction, type, delay, duration) => ({
     y: 0,
     opacity: 1,
     transition: {
-      type: 'spring',
-      delay: delay,
-      duration: 3,
+      type,
+      delay,
+      duration,
       ease: 'easeOut',
     },
   },
 });
-
 
 export const textContainer = {
   hidden: {
@@ -50,7 +49,7 @@ export const textContainer = {
   },
   show: (i = 1) => ({
     opacity: 1,
-    transition: { staggerChildren: 0.05, delayChildren: i * 0.1 },
+    transition: { staggerChildren: 0.05, delayChildren: i * 0.1},
   }),
 };
 
@@ -65,7 +64,7 @@ export const textVariant = (delay) => ({
     transition: {
       type: 'spring',
       duration: 1.25,
-      delay: delay,
+      delay,
     },
   },
 });

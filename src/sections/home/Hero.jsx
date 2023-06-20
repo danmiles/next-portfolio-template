@@ -4,7 +4,7 @@ import styles from '@/styles/home-page/hero.module.css';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { TitleText, TypingText } from '@/components/CustomTexts';
-import { overturnFadeIn, staggerContainer } from '@/utils/motion';
+import { fadeIn, staggerContainer } from '@/utils/motion';
 
 const Hero = () => {
   return (
@@ -36,9 +36,9 @@ const Hero = () => {
               </div>
             </div>
             <div className={styles.right}>
-              <motion.div variants={overturnFadeIn('right')}>
+              <motion.div variants={fadeIn('left','tween', 0.2, 1)}>
                 <Image
-                  src="/images/home-page/hero-image.png"
+                  src="/images/home-page/hero/hero-image.png"
                   alt="hero image"
                   width={600}
                   height={600}

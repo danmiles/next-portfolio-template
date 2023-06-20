@@ -1,6 +1,13 @@
+.about {
+  position: relative;
+}
 .content {
   display: flex;
   gap: 100px;
+}
+
+.left {
+  position: relative;
 }
 
 .subtitle {
@@ -9,4 +16,24 @@
   margin-bottom: 30px;
   color: var(--text);
   line-height: 1.7;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.despirionItem {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.aboutImage {
+  width: 500px;
+  height: 500px;
 }
