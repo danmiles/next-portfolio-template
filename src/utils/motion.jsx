@@ -26,8 +26,8 @@ export const overturnFadeIn = (direction) => ({
 
 export const fadeIn = (direction, type, delay, duration) => ({
   hidden: {
-    x: direction === 'left' ? 300 : direction === 'right' ? -300 : 0,
-    y: direction === 'up' ? 300 : direction === 'down' ? -300 : 0,
+    x: direction === 'left' ? 100 : direction === 'right' ? -100 : 0,
+    y: direction === 'up' ? 100 : direction === 'down' ? -100 : 0,
     opacity: 0,
   },
   show: {

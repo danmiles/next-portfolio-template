@@ -10,16 +10,6 @@
   height: auto;
 }
 
-.left {
-  width: 40%;
-  height: 100%;
-}
-
-.right {
-  width: 60%;
-  height: 100%;
-}
-
 .subtitle {
   font-size: 25px;
   font-weight: 700;
@@ -49,18 +39,7 @@
   }
 }
 
-@media only screen and (max-width: 1250px) {
-
-  /* .content {
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 30px;
-  } */
-  
-  .left, .right {
-    width: 80%;
-  }
+@media only screen and (max-width: 1250px) {  
 
   .subtitle {
     font-size: 20px;
@@ -76,7 +55,6 @@
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    max-width: auto;
   }
 
   .aboutImage {
