@@ -5,10 +5,9 @@ const Footer = () => {
   // get current year
   const year = new Date().getFullYear();
   return (
-    <></>
-    // <footer className={styles.footer}>
-    //   <p className={styles.text}>&copy;{year} - Next.js 13 portfolio</p>
-    // </footer>
+    <footer className={styles.footer}>
+      <p className={styles.text}>&copy;{year} - Next.js 13 portfolio</p>
+    </footer>
   );
 };
 
