@@ -1,5 +1,4 @@
-.about {
-}
+
 .content {
   display: flex;
   gap: 100px;
@@ -54,13 +53,10 @@
     gap: 50px;
   }
 
-  .aboutImage {
-    max-width: 500px;
-    max-height: 500px;
-  }
+
 }
 
-@media only screen and (max-width: 1250px) {  
+@media only screen and (max-width: 1270px) {  
 
   .subtitle {
     font-size: 20px;
@@ -68,6 +64,11 @@
 
   .despirionItem {
     font-size: 18px;
+  }
+
+  .aboutImage {
+    max-width: 400px;
+    max-height: 400px;
   }
 }
 
@@ -94,5 +95,11 @@
 
   .right {
     width: 100%;
+  }
+}
+@media only screen and (max-width: 578px) {
+  .aboutImage {
+    max-width: 300px;
+    max-height: 300px;
   }
 }
