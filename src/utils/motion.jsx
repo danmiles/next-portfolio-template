@@ -72,11 +72,11 @@ export const textVariant = (delay) => ({
 export const textVariant2 = {
   hidden: {
     opacity: 0,
-    y: 100,
+    x: 100,
   },
   show: {
     opacity: 1,
-    y: 0,
+    x: 0,
     transition: {
       type: 'tween',
       ease: 'easeIn',

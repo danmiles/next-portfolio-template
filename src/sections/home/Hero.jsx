@@ -18,10 +18,15 @@ const Hero = () => {
         <div className="container">
           <div className={styles.content}>
             <div className={styles.left}>
-              <TitleText
+              {/* <TitleText
+                viewport={{ once: true, amount: 0.25 }}
                 stylesClass={styles.title}
                 title="Front-End Insights: Harnessing the Power of Design and Technology for Web Excellence"
-              />
+              /> */}
+              <h2 className={styles.title}>
+                Front-End Insights: Harnessing the Power of Design and
+                Technology for Web Excellence
+              </h2>
               <div className={styles.description}>
                 <TypingText
                   text="We are a team of passionate designers and developers who are 
@@ -36,7 +41,7 @@ const Hero = () => {
               </div>
             </div>
             <div className={styles.right}>
-              <motion.div variants={fadeIn('left','tween', 0.2, 1)}>
+              <motion.div variants={fadeIn('left', 'tween', 0.2, 1)}>
                 <Image
                   src="/images/home-page/hero/hero-image.png"
                   alt="hero image"
