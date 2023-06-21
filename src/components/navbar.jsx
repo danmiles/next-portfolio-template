@@ -4,6 +4,7 @@ import Link from 'next/link';
 import styles from '@/styles/navbar.module.css';
 import Image from 'next/image';
 import { navbarLinks } from '@/data/constData';
+import DarkModeToggle from './DarkModeToggle/DarkModeToggle';
 
 import NavbarMobile from './NavbarMobile';
 
@@ -20,6 +21,9 @@ const Navbar = () => {
           </div>
 
           <div className={styles.menu}>
+            {/* Dark Mode Toggle */}
+            <DarkModeToggle />
+            {/* Menu links start */}
             {navbarLinks.map((link) => {
               return (
                 <li key={link.id}>
@@ -29,6 +33,7 @@ const Navbar = () => {
                 </li>
               );
             })}
+            {/* Menu links end */}
             <button
               className="button-main"
               onClick={() => console.log('logout')}

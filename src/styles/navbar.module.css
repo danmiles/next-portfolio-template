@@ -1,6 +1,5 @@
 .navbar {
   padding: 10px 0;
-  /* background-color: bisque; */
 }
 
 .logo {
@@ -9,7 +8,6 @@
   gap: 10px;
   font-size: 20px;
   font-weight: 600;
-  color: var(--text);
 }
 
 .list {
@@ -27,7 +25,6 @@
 .link {
   font-size: 16px;
   font-weight: 500;
-  color: var(--text);
   transition: var(--transition);
 }
 .link:hover {

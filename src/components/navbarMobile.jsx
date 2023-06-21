@@ -5,6 +5,7 @@ import styles from '@/styles/navbarMobile.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import { navbarLinks } from '@/data/constData';
+import DarkModeToggle from './DarkModeToggle/DarkModeToggle';
 
 const NavbarMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -66,13 +67,19 @@ const NavbarMobile = () => {
               </li>
             );
           })}
+          {/* Dark mode toggle */}
+          <li className={styles.item}>
+            <DarkModeToggle />
+          </li>
           {/* logout button */}
-          <button
-            className={styles.buttonMobile}
-            onClick={() => console.log('logout')}
-          >
-            Logout
-          </button>
+          <li className={styles.item}>
+            <button
+              className={styles.buttonMobile}
+              onClick={() => console.log('logout')}
+            >
+              Logout
+            </button>
+          </li>
         </ul>
       </div>
     </nav>

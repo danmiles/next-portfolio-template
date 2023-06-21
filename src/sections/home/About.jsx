@@ -11,16 +11,20 @@ import { aboutData } from '@/data/constData';
 const About = () => {
   return (
     <section className={styles.about}>
-      <motion.div
+      {/* <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
+        viewport={{ once: false, amount: 0.35 }}
         className={styles.container}
-      >
+      > */}
+      <div className={styles.container}>
         <div className={styles.content}>
           <motion.div
             variants={overturnFadeIn('left')}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.35 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className={styles.left}
@@ -33,10 +37,13 @@ const About = () => {
               className={styles.aboutImage}
             />
           </motion.div>
-            
+
           <motion.div
             variants={fadeIn('left', 'tween', 0.2, 1)}
-            className={styles.right}              
+            className={styles.right}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.35 }}
           >
             <TypingText stylesClass="section-title" text="| About Us" />
             <h3 className={styles.subtitle}>
@@ -48,26 +55,22 @@ const About = () => {
               {aboutData.map((item) => {
                 return (
                   <li className={styles.despirionItem} key={item.id}>
-                    <Image
-                      src={item.image}
-                      alt="icon"
-                      width={50}
-                      height={50}
-                    />
+                    <Image src={item.image} alt="icon" width={50} height={50} />
                     <p>{item.description}</p>
                   </li>
                 );
               })}
             </ul>
             <p className={styles.text}>
-              So let's go on this wonderful digital adventure together. And
-              we will bring your project to new heights and successes.
+              So let's go on this wonderful digital adventure together. And we
+              will bring your project to new heights and successes.
             </p>
           </motion.div>
         </div>
         {/* end content */}
-        {/* end container */}
-      </motion.div>
+      </div>
+      {/* </motion.div> */}
+      {/* end container */}
     </section>
   );
 };

@@ -51,6 +51,7 @@
 .logoTitle {
   font-size: 25px;
   font-weight: bold;
+  color: var(--primary-color);
 }
 
 .open .menuList {

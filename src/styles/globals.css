@@ -4,21 +4,18 @@
   /* Global color and fonts*/
   --main-font: 'Inter', sans-serif;
   --second-font: 'Inter', sans-serif;
-  --primary-color: #1ab769;
-  --bg-color-1: #191a25;
+  --primary-color: #27d57e;
+  --bg-color-dark: #191a25;
   --bg-color-section: #1f2235;
   --link: #1ab769;
   --hover: #24d3dc;
-  --text: #bbbbbb;
   --font-size: 18px;
   --white: #ffffff;
   --transition: all 0.3s ease;
 }
 
 body {
-  font-size: var(--font-size);
-  background-color: var(--bg-color-1);
-  color: var(--text);
+  font-size: var(--font-size);  
   font-family: var(--main-font);
   line-height: 1.4;
   min-width: 320px;
@@ -27,6 +24,16 @@ body {
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+}
+
+.dark {
+  background-color: var(--bg-color-dark);
+  color: #bbbbbb;
+}
+
+.white {
+  background-color: #b7abab;
+  color: #282424;
 }
 
 
@@ -137,7 +144,6 @@ button {
 }
 
 ::selection {
-  color: var(--text);
   background-color: #1e6a44;
 }
 
