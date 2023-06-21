@@ -1,13 +1,29 @@
-
+.about {
+}
 .content {
   display: flex;
   gap: 100px;
+  width: 100%;
 }
 
+.container {
+  width: 100%;
+  max-width: 1560px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.left {
+  width: 40%;
+}
+
+.right {
+  width: 60%;
+}
 
 .aboutImage {
-  width: 100%;
-  height: auto;
+  /* width: 100%;
+  height: auto; */
 }
 
 .subtitle {
@@ -37,6 +53,11 @@
   .content {
     gap: 50px;
   }
+
+  .aboutImage {
+    max-width: 500px;
+    max-height: 500px;
+  }
 }
 
 @media only screen and (max-width: 1250px) {  
@@ -55,11 +76,6 @@
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-  }
-
-  .aboutImage {
-    max-width: 500px;
-    max-height: 500px;
   }
 
   .left {
