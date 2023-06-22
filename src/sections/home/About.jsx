@@ -24,7 +24,7 @@ const About = () => {
             variants={overturnFadeIn('left')}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0}}
+            viewport={{ once: false, amount: 0 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className={styles.left}
@@ -69,8 +69,8 @@ const About = () => {
         </div>
         {/* end content */}
       </div>
-      {/* </motion.div> */}
       {/* end container */}
+      {/* </motion.div> */}
     </section>
   );
 };

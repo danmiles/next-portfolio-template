@@ -14,45 +14,44 @@ const Hero = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
+        className='container'
       >
-        <div className="container">
-          <div className={styles.content}>
-            {/* Left start */}
-            <div className={styles.left}>
-              <h2 className={styles.title}>
-                Front-End Insights: Harnessing the Power of Design and
-                Technology for Web Excellence
-              </h2>
-              <div className={styles.description}>
-                <TypingText
-                  text="We are a team of passionate designers and developers who are 
-                dedicated to delivering the best possible solutions for our clients."
-                />
-                <TypingText
-                  text="Next 13 is a revolutionary software solution that offers a
-                  wide range of benefits to businesses and individuals alike.
-                  With Next 13, you can streamline your operations, enhance
-                  productivity, and stay ahead of the competition."
-                />
-              </div>
-            </div>
-            {/* Left end */}
-            {/* Right */}
-            <motion.div
-              className={styles.right}
-              variants={fadeIn('left', 'tween', 0.2, 1)}
-            >
-              <Image
-                src="/images/home-page/hero/hero-image.png"
-                alt="hero image"
-                width={500}
-                height={500}
-                className={styles.heroImage}
+        <div className={styles.content}>
+          {/* Left start */}
+          <div className={styles.left}>
+            <h2 className={styles.title}>
+              Front-End Insights: Harnessing the Power of Design and
+              Technology for Web Excellence
+            </h2>
+            <div className={styles.description}>
+              <TypingText
+                text="We are a team of passionate designers and developers who are 
+              dedicated to delivering the best possible solutions for our clients."
               />
-            </motion.div>
+              <TypingText
+                text="Next 13 is a revolutionary software solution that offers a
+                wide range of benefits to businesses and individuals alike.
+                With Next 13, you can streamline your operations, enhance
+                productivity, and stay ahead of the competition."
+              />
+            </div>
           </div>
-          {/* end content */}
+          {/* Left end */}
+          {/* Right */}
+          <motion.div
+            className={styles.right}
+            variants={fadeIn('left', 'tween', 0.2, 1)}
+          >
+            <Image
+              src="/images/home-page/hero/hero-image.png"
+              alt="hero image"
+              width={500}
+              height={500}
+              className={styles.heroImage}
+            />
+          </motion.div>
         </div>
+        {/* end content */}
         {/* end container */}
       </motion.div>
     </section>
