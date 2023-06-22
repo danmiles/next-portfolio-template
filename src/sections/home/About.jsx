@@ -24,7 +24,7 @@ const About = () => {
             variants={overturnFadeIn('left')}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.35 }}
+            viewport={{ once: false, amount: 0}}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className={styles.left}
@@ -39,7 +39,7 @@ const About = () => {
           </motion.div>
 
           <motion.div
-            variants={fadeIn('left', 'tween', 0.2, 1)}
+            variants={fadeIn('right', 'tween', 0.2, 1)}
             className={styles.right}
             initial="hidden"
             whileInView="show"

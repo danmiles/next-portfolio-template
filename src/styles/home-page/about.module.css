@@ -78,6 +78,11 @@
     justify-content: center;
   }
 
+  .aboutImage {
+    max-width: 500px;
+    max-height: 500px;
+  }
+
   .left {
     width: 100%;
     display: flex;
@@ -96,9 +101,4 @@
     width: 100%;
   }
 }
-@media only screen and (max-width: 578px) {
-  .aboutImage {
-    max-width: 300px;
-    max-height: 300px;
-  }
-}
+
