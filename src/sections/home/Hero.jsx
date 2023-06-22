@@ -34,6 +34,11 @@ const Hero = () => {
                 With Next 13, you can streamline your operations, enhance
                 productivity, and stay ahead of the competition."
               />
+              <TypingText
+                text="Our team have a proven track record of delivering high-quality
+                software solutions to our clients."
+                />
+              
             </div>
           </div>
           {/* Left end */}

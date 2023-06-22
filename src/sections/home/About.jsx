@@ -11,20 +11,16 @@ import { aboutData } from '@/data/constData';
 const About = () => {
   return (
     <section className={styles.about}>
-      {/* <motion.div
+      <motion.div
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.35 }}
         className={styles.container}
-      > */}
-      <div className={styles.container}>
+      >
         <div className={styles.content}>
           <motion.div
-            variants={overturnFadeIn('left')}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0 }}
+            variants={overturnFadeIn('left')}          
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className={styles.left}
@@ -40,10 +36,7 @@ const About = () => {
 
           <motion.div
             variants={fadeIn('right', 'tween', 0.2, 1)}
-            className={styles.right}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.35 }}
+            className={styles.right}        
           >
             <TypingText stylesClass="section-title" text="| About Us" />
             <h3 className={styles.subtitle}>
@@ -68,9 +61,8 @@ const About = () => {
           </motion.div>
         </div>
         {/* end content */}
-      </div>
+      </motion.div>
       {/* end container */}
-      {/* </motion.div> */}
     </section>
   );
 };
