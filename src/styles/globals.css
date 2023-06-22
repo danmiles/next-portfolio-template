@@ -27,6 +27,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.theme{
+  transition: 1s all ease;
+}
+
 .dark {
   background-color: var(--bg-color-dark);
   color: #bbbbbb;
