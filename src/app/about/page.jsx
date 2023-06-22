@@ -3,14 +3,21 @@ import styles from "@/styles/pages/aboutPage.module.css";
 import Image from "next/image";
 import ButtonLink from "@/components/ButtonLink";
 
+export const metadata = {
+  title: "JsCase | About",
+  description: "About us page of JsCase. We are a team of digital storytellers.",
+};
+
+
 const About = () => {
   return (
-    <div className={styles.container}>
+    <section className={styles.aboutPage}>
+    <div className='container'>
       <div className={styles.imgContainer}>
         <Image
-          src="https://images.pexels.com/photos/3194521/pexels-photo-3194521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          src="https://pixabay.com/get/g626b9341eb13e9f8b508628871eaaa45e005b33889383fd475f3abcc67857831736e9b4f7daeaa6122a562e8f5c31023_1280.jpg"
           fill={true}
-          alt=""
+          alt="about team"
           className={styles.img}
         />
         <div className={styles.imgText}>
@@ -57,6 +64,7 @@ const About = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 
