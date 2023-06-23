@@ -1,6 +1,7 @@
 .navbarMobile {
   position: relative;
   display: none;
+  z-index: 999;
 }
 
 .menuBtn {

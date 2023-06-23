@@ -4,13 +4,13 @@ import styles from '@/styles/pages/portfolioPage.module.css';
 import { motion } from 'framer-motion';
 import { fadeIn, staggerContainer } from '@/utils/motion';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Portfolio = () => {
   return (
     <section className={styles.portfolioPage}>
       <div className={styles.content}>
-        <h1 className={styles.selectTitle}>Choose a gallery</h1>
-        {/* Background image with Next Image plugin  */}
+        <h1 className={styles.mainTitle}>Choose a gallery</h1>
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -21,12 +21,15 @@ const Portfolio = () => {
           {/* element 1 start */}
           <motion.div
             className={styles.galleryItem}
-            variants={fadeIn('left', 'tween', 0.2, 1)}
+            variants={fadeIn('left', 'tween', 0.2, 2)}
           >
-            <Link
-              href="/portfolio/illustrations"
-              className={`${styles.image} ${' '} ${styles.image1}`}
-            >
+            <Link href="/portfolio/illustrations" className={styles.link}>
+              <Image
+                src="/images/portfolio/illustration.png"
+                alt="illustration"
+                quality={70}
+                fill={true}
+              />
               <span className={styles.title}>Illustrations</span>
             </Link>
           </motion.div>
@@ -34,12 +37,15 @@ const Portfolio = () => {
           {/* element 2 start */}
           <motion.div
             className={styles.galleryItem}
-            variants={fadeIn('up', 'tween', 0.2, 1)}
+            variants={fadeIn('up', 'tween', 0.2, 2)}
           >
-            <Link
-              href="/portfolio/websites"
-              className={`${styles.image} ${' '} ${styles.image2}`}
-            >
+            <Link href="/portfolio/websites" className={styles.link}>
+              <Image
+                src="/images/portfolio/websites.jpg"
+                alt="illustration"
+                quality={70}
+                fill={true}
+              />
               <span className={styles.title}>Websites</span>
             </Link>
           </motion.div>
@@ -47,12 +53,15 @@ const Portfolio = () => {
           {/* element 3 start */}
           <motion.div
             className={styles.galleryItem}
-            variants={fadeIn('right', 'tween', 0.2, 1)}
+            variants={fadeIn('right', 'tween', 0.2, 2)}
           >
-            <Link
-              href="/portfolio/applications"
-              className={`${styles.image}${' '}${styles.image3}`}
-            >
+            <Link href="/portfolio/applications" className={styles.link}>
+              <Image
+                src="/images/portfolio/apps.jpg"
+                alt="illustration"
+                quality={70}
+                fill={true}
+              />
               <span className={styles.title}>Application</span>
             </Link>
           </motion.div>

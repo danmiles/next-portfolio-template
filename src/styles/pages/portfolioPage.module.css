@@ -12,12 +12,8 @@
 }
 
 .mainTitle {
-  font-size: 100px;
-}
-
-.selectTitle {
-  font-size: 50px;
-  margin: 20px 0px;
+  font-size: 60px;
+  margin-bottom: 30px;
 }
 
 .gallery {
@@ -26,19 +22,23 @@
   gap: 50px;
 }
 
-.image {
+.galleryItem {
+  height: 600px;
+  width: 500px;
   border: 5px solid #bbb;
   border-radius: 5px;
-  height: 600px ;
-  width: 500px ;
-  display: block;
   position: relative;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
+  cursor: pointer;
 }
 
-.image::before {
+.link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.link::before {
   content: '';
   position: absolute;
   top: 0;
@@ -51,19 +51,8 @@
   background-color: black;
   transition: var(--transition);
 }
-.image:hover::before {
+.link:hover::before {
   opacity: 0.6;
-}
-
-/* Background image with Next Image plugin */
-.image1 {
-  background: url('/images/portfolio/illustration.png');
-}
-.image2 {
-  background: url('/images/portfolio/websites.jpg');
-}
-.image3 {
-  background: url('/images/portfolio/apps.jpg');
 }
 
 .title {
@@ -76,12 +65,12 @@
   color: var(--link-color);
 }
 
-.image:hover .title {
+.link:hover .title {
   color: var(--hover-color);
 }
 
 @media only screen and (max-width: 1700px) {
-  .image {
+  .galleryItem {
     height: 500px;
     width: 400px;
   }
@@ -90,5 +79,23 @@
 @media only screen and (max-width: 1400px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 978px) {
+  .gallery {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+
+  .mainTitle {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 578px) {
+  .galleryItem {
+    height: 400px;
+    width: 280px;
   }
 }
