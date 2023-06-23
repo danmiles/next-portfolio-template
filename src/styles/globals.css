@@ -7,7 +7,7 @@
   --primary-color: #30b573;
   --bg-color-dark: #191a25;
   --bg-color-section: #1f2235;
-  --link: #1ab769;
+  --link-color: #38ff9c;
   --hover: #24d3dc;
   --font-size: 18px;
   --white: #ffffff;
@@ -128,7 +128,7 @@ div {
 
 a {
   transition: var(--transition);
-  color: var(--link);
+  color: var(--link-color);
   text-decoration: none;
   cursor: pointer;
   line-height: 1;
