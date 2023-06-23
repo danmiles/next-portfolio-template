@@ -27,7 +27,7 @@ const Portfolio = () => {
               <Image
                 src="/images/portfolio/illustration.png"
                 alt="illustration"
-                quality={70}
+                quality={50}
                 fill={true}
               />
               <span className={styles.title}>Illustrations</span>
@@ -43,7 +43,7 @@ const Portfolio = () => {
               <Image
                 src="/images/portfolio/websites.jpg"
                 alt="illustration"
-                quality={70}
+                quality={50}
                 fill={true}
               />
               <span className={styles.title}>Websites</span>
@@ -59,7 +59,7 @@ const Portfolio = () => {
               <Image
                 src="/images/portfolio/apps.jpg"
                 alt="illustration"
-                quality={70}
+                quality={50}
                 fill={true}
               />
               <span className={styles.title}>Application</span>
