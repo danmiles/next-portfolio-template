@@ -1,6 +1,8 @@
 
 .catTitle {
-  color: var(--primary);
+  color: var(--primary-color);
+  font-size: 45px;
+  text-transform: capitalize;
 }
 
 .item{
@@ -33,7 +35,8 @@
 }
 
 .title{
-  font-size: 50px;
+  font-size: 40px;
+  text-transform: capitalize;
 }
 
 .desc{
