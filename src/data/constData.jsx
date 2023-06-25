@@ -63,21 +63,19 @@ export const portfolioCategory = {
       title: 'Web Application',
       desc: 'To build a complete web application with React from scratch, there are many important details you need to conside. A framework can solve these problems. But such a framework must have the right level of abstraction — otherwise it won’t be very useful. It also needs to have great Developer Experience, ensuring you and your team have an amazing experience while writing code.',
       image:
-        'https://pixabay.com/get/g9c41344fa8b5fa695310e45ade881e1a99d577891ac139b53c2cef5a35f8afd63fb97f2252399c01cde9ba292aa92626_640.jpg',
+        '/images/portfolio/category/web-app-1.png',
     },
     {
       id: 2,
       title: 'What is benefits of ReactJS?',
       desc: 'ReactJS is an open-source JavaScript library that is used for building user interfaces specifically for single-page applications. It’s used for handling the view layer for web and mobile apps. React also allows us to create reusable UI components. React was first created by Jordan Walke, a software engineer working for Facebook. React first deployed on Facebook’s newsfeed in 2011 and on Instagram.com in 2012.',
-      image:
-        'https://pixabay.com/get/g4e5feb513f880d9a1348808816744613d065c67f64304e43637afb729cd427fdc36ab373484daa213af1a53f42e35536_640.jpg',
+      image: '/images/portfolio/category/web-app-2.jpg',
     },
     {
       id: 3,
       title: 'Level up your bisiness with our applications',
       desc: 'We creating for you a web application that will help you to grow your bisiness. We are using ReactJS, NodeJS, Gatsby.js and another tools. We really love what we do and we are always ready to help you to deside a problems. ',
-      image:
-        'https://pixabay.com/get/g38ff6ab13fcc676ee0671a9305cb4db1d5352b60fb8ac5c75e8e909addbf7ec315e0d881d021baf64f1271838b247aac_640.jpg',
+      image:'/images/portfolio/category/web-app-3.jpg',
     },
   ],
   illustrations: [
