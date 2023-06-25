@@ -7,6 +7,11 @@ import Image from 'next/image';
 import { navbarLinks } from '@/data/constData';
 import DarkModeToggle from './DarkModeToggle/DarkModeToggle';
 
+// Images
+import logo from 'public/images/logo.svg';
+import menuMobile from 'public/images/navbar/menu-mobile.svg';
+import menuMobileClose from 'public/images/navbar/menu-mobile__close.svg';
+
 const NavbarMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
   // function close menu on press escape key
@@ -32,7 +37,7 @@ const NavbarMobile = () => {
         >
           {isOpen ? (
             <Image
-              src="images/navbar/menu-mobile__close.svg"
+              src={menuMobileClose}
               width={40}
               height={40}
               alt="menu"
@@ -40,7 +45,7 @@ const NavbarMobile = () => {
             />
           ) : (
             <Image
-              src="images/navbar/menu-mobile.svg"
+              src={menuMobile}
               width={40}
               height={40}
               alt="menu"
@@ -55,7 +60,7 @@ const NavbarMobile = () => {
           {/* Logo */}
           <div className={styles.logo}>
             <Link href="/">
-              <Image src="images/logo.svg" width={35} height={35} alt="logo" />
+              <Image src={logo} width={35} height={35} alt="logo" />
             </Link>
             <h2 className={styles.logoTitle}>JsCase</h2>
           </div>

@@ -106,7 +106,7 @@ export const portfolioCategory = {
   websites: [
     {
       id: 1,
-      title: 'Our Next.js web applications with strrong performance',
+      title: 'Our Next.js web applications with strong performance',
       desc: 'Next.js is a React framework that enables several capabilities, including server-side rendering and generating static websites. It is a great tool for building your next website, blog, or web app. It is a React framework that enables several capabilities, including server-side rendering and generating static websites. It is a great tool for building your next website, blog, or web app.',
       image:
         'https://pixabay.com/get/gcb89cdc534729943a2a865e2410819b06cce4535be3326b95f5f11da4f8fc7e07e321d4943821556ec1512dfefca4dcf_640.jpg',

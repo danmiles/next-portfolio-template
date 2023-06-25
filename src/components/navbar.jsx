@@ -7,6 +7,8 @@ import { navbarLinks } from '@/data/constData';
 import DarkModeToggle from './DarkModeToggle/DarkModeToggle';
 
 import NavbarMobile from './NavbarMobile';
+// Images
+import logo from 'public/images/logo.svg';
 
 const Navbar = () => {
   return (
@@ -15,7 +17,7 @@ const Navbar = () => {
         <ul className={styles.list}>
           <div className={styles.logo}>
             <Link href="/">
-              <Image src="images/logo.svg" width={40} height={40} alt="logo" />
+              <Image src={logo} width={40} height={40} alt="logo" />
             </Link>
             <h2>JsCase</h2>
           </div>
