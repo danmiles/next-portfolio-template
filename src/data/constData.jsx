@@ -83,22 +83,19 @@ export const portfolioCategory = {
       id: 1,
       title: 'We using different tools for creating illustrations',
       desc: 'Our team is using different tools for creating illustrations. We are using Figma, Adobe Illustrator, Adobe Photoshop, Adobe XD, and another tools. We really love what we do and we are always ready to help you to deside a problems. ',
-      image:
-        'https://pixabay.com/get/g11d627ad58b554365a552e5625bf4e080a4e2f123128539f8195fc8bd568e45e6b7e1f1b8748fcdc2a7b877c8678d16e_640.png',
+      image:'/images/portfolio/category/illustration-1.jpg'
     },
     {
       id: 2,
       title: 'We are creating illustrations for your bisiness',
       desc: 'We creating for you a web application that will help you to grow your bisiness. We are using ReactJS, NodeJS, Gatsby.js and another tools. We really love what we do and we are always ready to help you to deside a problems. ',
-      image:
-        'https://pixabay.com/get/g618ba6cd7aa4565a16c46b2f3812c39b75e528c51b77db5e9a0c9244509c5015c3df2e04f873833055a88cd9641e3b37_640.png',
+      image:'/images/portfolio/category/illustration-2.jpg'
     },
     {
       id: 3,
       title: 'Our designers are always ready to help you',
       desc: 'Our designers are always ready to help you. We are using Figma, Adobe Illustrator, Adobe Photoshop, Adobe XD, and another tools. We really love what we do and we are always ready to help you to deside a problems.',
-      image:
-        'https://pixabay.com/get/gefb1ab497eedc2d897a2c66862ee956ae32429500185261472758c5dba792528c335d8c5d8e3bd9570ab764de9cc8248_640.jpg',
+      image:'/images/portfolio/category/illustration-3.jpg'
     },
   ],
   websites: [
@@ -106,22 +103,19 @@ export const portfolioCategory = {
       id: 1,
       title: 'Our Next.js web applications with strong performance',
       desc: 'Next.js is a React framework that enables several capabilities, including server-side rendering and generating static websites. It is a great tool for building your next website, blog, or web app. It is a React framework that enables several capabilities, including server-side rendering and generating static websites. It is a great tool for building your next website, blog, or web app.',
-      image:
-        'https://pixabay.com/get/gcb89cdc534729943a2a865e2410819b06cce4535be3326b95f5f11da4f8fc7e07e321d4943821556ec1512dfefca4dcf_640.jpg',
+      image:'/images/portfolio/category/website-1.jpg'
     },
     {
       id: 2,
       title: 'Gatsby.js is a React-based open source framework.',
       desc: 'Gatsby.js is a React-based open source framework with performance, scalability and security built-in. Collaborate, build and deploy 1000x faster with Gatsby Cloud. Gatsby.js is a React-based open source framework with performance, scalability and security built-in. Collaborate, build and deploy 1000x faster with Gatsby Cloud.',
-      image:
-        'https://pixabay.com/get/gf2e0291a67c20ebf0c85b00fd16e0b42ddc1a7e83d0083b2b0d5883a190aae09da6ac352ecebf1711fe43a2f2b43b079_640.jpg',
+      image:'/images/portfolio/category/website-2.jpg'
     },
     {
       id: 3,
       title: 'Headless CMS for your bisiness',
       desc: 'A headless CMS is a content management system that provides a way to author content, but instead of having your content coupled to a particular output (like web page rendering), it provides your content as data over an API. A headless CMS is a content management system that provides a way to author content, but instead of having your content coupled to a particular output (like web page rendering), it provides your content as data over an API.',
-      image:
-        'https://pixabay.com/get/g07bbe1e275940e87d051925142f8db6f9c56f7c0301acc9db68d3d1b0f49fadaf8d37ea8cdc46c9c818c11931bbc0495_640.jpg',
+      image:'/images/portfolio/category/website-3.jpg'
     },
   ],
 };
