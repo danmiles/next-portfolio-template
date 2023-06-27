@@ -3,6 +3,12 @@ import styles from "@/styles/pages/blog.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
+export const metadata = {
+  title: 'JsCase | Our Blog',
+  description:
+    'Our blog page of JsCase. We are a team of digital storytellers',
+};
+
 async function getData() {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
     cache: "no-store",

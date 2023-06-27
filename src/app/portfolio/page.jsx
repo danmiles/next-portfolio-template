@@ -6,6 +6,11 @@ import { fadeIn, staggerContainer } from '@/utils/motion';
 import Link from 'next/link';
 import Image from 'next/image';
 
+export const metadata = {
+  title: 'JsCase | Portfolio',
+  description:'Our portfolio page of JsCase. We create digital products for your business.',
+};
+
 const Portfolio = () => {
   return (
     <section className={styles.portfolioPage}>
