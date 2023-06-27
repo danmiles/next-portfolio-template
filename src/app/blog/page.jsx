@@ -15,14 +15,11 @@ async function getData() {
   return res.json();
 }
 
-export async function generateMetadata({ params }) {
-  const post = await getData(params.id);
-  return {
-    title: post[0].title,
-    description: post[0].desc,
-  };
-}
-
+export const metadata = {
+  title: 'JsCase | Blog',
+  description:
+    'Our blog page of JsCase. We whrite articles about web development.',
+};
 const Blog = async () => {
   const data = await getData();
   return (
