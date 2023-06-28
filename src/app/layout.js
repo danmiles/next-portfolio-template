@@ -7,8 +7,8 @@ import { ThemeProvider } from '@/components/DarkModeToggle/ThemeContext';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Js Case your next js boilerplate',
-  description: 'Js Case your next js boilerplate for your next project with next js 13 and tailwind css ',
+  title: 'Js Case | Next Js developers',
+  description: 'Js Case - team developers using Next Js framework. ',
 };
 
 export default function RootLayout({ children }) {
