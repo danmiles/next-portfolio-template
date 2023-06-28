@@ -3,7 +3,7 @@ import React from 'react';
 import styles from '@/styles/home-page/hero.module.css';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { TitleText, TypingText } from '@/components/CustomTexts';
+import { TypingText } from '@/components/CustomTexts';
 import { fadeIn, staggerContainer } from '@/utils/motion';
 
 const Hero = () => {
