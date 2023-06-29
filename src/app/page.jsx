@@ -1,4 +1,3 @@
-'use client';
 import Hero from '@/sections/home/Hero';
 import About from '@/sections/home/About';
 
