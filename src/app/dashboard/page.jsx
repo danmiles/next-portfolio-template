@@ -1,10 +1,10 @@
-"use client";
-import React, { useEffect, useState } from "react";
+'use client';
+import React, { useEffect, useState } from 'react';
 // import useSWR from "swr";
-import { useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
-import Image from "next/image";
-import styles from "@/styles/pages/dashboard.module.css";
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
+import Image from 'next/image';
+import styles from '@/styles/pages/dashboard.module.css';
 
 const Dashboard = () => {
   //OLD WAY TO FETCH DATA
@@ -33,17 +33,15 @@ const Dashboard = () => {
   // }, []);
 
   const session = useSession();
-  console.log(session)
+  console.log(session);
 
   const router = useRouter();
-  
 
   return (
     <section className={styles.dashboard}>
-      <div>Dashboard</div>
       
     </section>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;
