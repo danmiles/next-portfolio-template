@@ -15,7 +15,7 @@ const About = () => {
       <div className="container">
         <div className={styles.imgContainer}>
           <Image
-            src="https://pixabay.com/get/g626b9341eb13e9f8b508628871eaaa45e005b33889383fd475f3abcc67857831736e9b4f7daeaa6122a562e8f5c31023_1280.jpg"
+            src="/images/about/about.jpg"
             fill={true}
             alt="about team"
             className={styles.img}
