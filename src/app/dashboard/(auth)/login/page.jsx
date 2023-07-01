@@ -17,9 +17,10 @@ const Login = ({ url }) => {
     setSuccess(params.get('success'));
   }, [params]);
 
-  if (session.status === 'loading') {
-    return <p>Loading...</p>;
-  }
+  // You can create some skeleton loading here
+  // if (session.status === 'loading') {
+  //   return <p>Loading...</p>;
+  // }
 
   if (session.status === 'authenticated') {
     router?.push('/dashboard');
@@ -58,7 +59,7 @@ const Login = ({ url }) => {
             className={styles.input}
           />
           <button className="button-main">Login</button>
-          {error && error}
+          {error && "Email or password doesn't match."}
         </form>
         <button
           onClick={() => {
