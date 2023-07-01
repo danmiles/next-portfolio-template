@@ -5,12 +5,14 @@ import styles from '@/styles/navbar.module.css';
 import Image from 'next/image';
 import { navbarLinks } from '@/data/constData';
 import DarkModeToggle from './DarkModeToggle/DarkModeToggle';
+import { signOut, useSession } from 'next-auth/react';
 
 import NavbarMobile from './NavbarMobile';
 // Images
 import logo from 'public/images/logo.svg';
 
 const Navbar = () => {
+  const session = useSession();
   return (
     <nav className={styles.navbar}>
       <div className="container">
@@ -36,17 +38,23 @@ const Navbar = () => {
               );
             })}
             {/* Menu links end */}
-            <button
-              className="button-main"
-              onClick={() => console.log('logout')}
-            >
-              Logout
-            </button>
+
+            {/* Sign out */}
+            {session.status == 'authenticated' && (
+              <li>
+                <button
+                  className='button-main'
+                  onClick={() => signOut({ redirect: false })}
+                >
+                  Sign out
+                </button>
+              </li>
+            )}
+            
           </div>
           {/* Navbar mobile */}
           <NavbarMobile />
         </ul>
-        
       </div>
     </nav>
   );

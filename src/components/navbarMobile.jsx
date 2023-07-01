@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { navbarLinks } from '@/data/constData';
 import DarkModeToggle from './DarkModeToggle/DarkModeToggle';
+import { signOut, useSession } from 'next-auth/react';
 
 // Images
 import logo from 'public/images/logo.svg';
@@ -13,6 +14,7 @@ import menuMobile from 'public/images/navbar/menu-mobile.svg';
 import menuMobileClose from 'public/images/navbar/menu-mobile__close.svg';
 
 const NavbarMobile = () => {
+  const session = useSession();
   const [isOpen, setIsOpen] = useState(false);
   // function close menu on press escape key
   useEffect(() => {
@@ -77,14 +79,16 @@ const NavbarMobile = () => {
             <DarkModeToggle />
           </li>
           {/* logout button */}
-          <li className={styles.item}>
-            <button
-              className={styles.buttonMobile}
-              onClick={() => console.log('logout')}
-            >
-              Logout
-            </button>
-          </li>
+          {session.status == 'authenticated' && (
+            <li>
+              <button
+                className={styles.buttonMobile}
+                onClick={() => signOut({ redirect: false })}
+              >
+                Sign out
+              </button>
+            </li>
+          )}
         </ul>
       </div>
     </nav>
