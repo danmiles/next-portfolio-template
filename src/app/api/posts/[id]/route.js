@@ -20,7 +20,7 @@ export const DELETE = async (request, { params }) => {
   const { id } = params;
 
   try {
-    await connect();
+    await connectDB();
 
     await Post.findByIdAndDelete(id);
 

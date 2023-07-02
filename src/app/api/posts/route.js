@@ -24,7 +24,7 @@ export const POST = async (request) => {
   const newPost = new Post(body);
 
   try {
-    await connect();
+    await connectDB();
 
     await newPost.save();
 
