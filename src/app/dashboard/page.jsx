@@ -122,7 +122,7 @@ const Dashboard = () => {
             <h1>Add New Post</h1>
             <input type="text" placeholder="Title" className={styles.input} />
             <input type="text" placeholder="Desc" className={styles.input} />
-            <input type="text" placeholder="Image URL" className={styles.input} />
+            <input type="text" placeholder="Image (Only your urls from Cloudinary are accepted)" className={styles.input} />
             <textarea
               placeholder="Content"
               className={styles.textArea}
