@@ -15,20 +15,37 @@
 
 .post {
   display: flex;
-  flex-direction: column;
+
   align-items: center;
   justify-content: center;
   gap: 20px;
   margin: 50px 0px;
 }
 
-.img {
-  object-fit: cover;
+.postLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border: 2px solid var(--color-primary);
+  background-color: #392f2f;
+  max-width: 470px;
+}
+
+.postTitle {
+  font-size: 25px;
+  line-height: 1.4;
 }
 
 .delete {
   cursor: pointer;
-  color: red;
+  color: rgb(231, 81, 81);
+  transition: var(--transition);
+}
+.delete:hover {
+  color: rgb(255, 10, 10);
 }
 
 .new {
@@ -55,6 +72,9 @@
 }
 
 @media only screen and (max-width: 1300px) {
+  .post {
+    flex-direction: column;
+  }
   .container {
     padding: 0 100px;
     gap: 30px;
@@ -63,14 +83,27 @@
 
 @media only screen and (max-width: 992px) {
   .container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 40px;
   }
 }
 
 @media only screen and (max-width: 578px) {
+  .input,
+  .textArea {
+    font-size: 16px;
+  }
   .container {
     padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  .postLink {
+    max-width: auto;
+  }
+
+  .img {
+    width: 100%;
+    height: auto;
   }
 }
-
