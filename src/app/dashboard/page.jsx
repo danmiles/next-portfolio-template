@@ -142,7 +142,7 @@ const Dashboard = () => {
               rows="10"
             ></textarea>
             <button className={`button-main ' ' ${styles.buttonDashboard}`}>
-              Send
+              Create new post
             </button>
           </form>
         </div>
