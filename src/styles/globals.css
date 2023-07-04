@@ -148,6 +148,26 @@ button {
   font-size: var(--font-size);
 }
 
+.message-status {
+  visibility: hidden;
+  color: #ffffff;
+  max-width: 300px;
+  font-size: 18px;
+  height: 0;
+  font-weight: bold;
+  transition: var(--transition);
+}
+.message-status.error {
+  height: auto;
+  visibility: visible;
+  color: red;
+}
+.message-status.success {
+  height: auto;
+  visibility: visible;
+  color: green;
+}
+
 ::selection {
   background-color: #1e6a44;
 }

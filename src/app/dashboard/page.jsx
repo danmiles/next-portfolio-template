@@ -11,39 +11,12 @@ import { set } from 'mongoose';
 import { m } from 'framer-motion';
 
 const Dashboard = () => {
-  //OLD WAY TO FETCH DATA
-
-  // const [data, setData] = useState([]);
-  // const [err, setErr] = useState(false);
-  // const [isLoading, setIsLoading] = useState(false);
-
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     setIsLoading(true);
-  //     const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
-  //       cache: "no-store",
-  //     });
-
-  //     if (!res.ok) {
-  //       setErr(true);
-  //     }
-
-  //     const data = await res.json()
-
-  //     setData(data);
-  //     setIsLoading(false);
-  //   };
-  //   getData()
-  // }, []);
-
-  // ================ NEW WAY TO FETCH DATA =================
   const [resource, setResource] = useState();
-  const [imgtest, setImgtest] = useState();
+  const [imgStatus, setImgStatus] = useState('Upload Image');
   const [status, setStatus] = useState({
     message: '',
     error: false,
   });
-  console.log(resource?.secure_url);
 
   const session = useSession();
 
@@ -94,7 +67,8 @@ const Dashboard = () => {
         });
         mutate();
         e.target.reset();
-        setStatus({ message: 'Your post has been created', error: false });
+        setStatus({ message: 'Your post has been created !', error: false });
+        setImgStatus('Upload Image');
       } catch (err) {
         console.log(err);
       }
@@ -152,19 +126,16 @@ const Dashboard = () => {
           </div>
           <form className={styles.new} onSubmit={handleSubmit}>
             <h1>Add New Post</h1>
-            <input type="text" placeholder="Title" className={styles.input} />
-            <input type="text" placeholder="Desc" className={styles.input} />
-            {/* <input
-              type="text"
-              placeholder="Image (Cloudinary URL only)"
-              className={styles.input}
-            /> */}
+            <input required type="text" placeholder="Title" className={styles.input} />
+            <input required type="text" placeholder="Desc" className={styles.input} />
 
             {/* Upload image with Cloudinary start */}
             <CldUploadWidget
               uploadPreset="upload-next-js"
               onUpload={(result, widget) => {
                 setResource(result?.info);
+                setImgStatus('Image uploaded !');
+                setStatus({ message: '', error: false });
                 widget.close();
               }}
             >
@@ -175,20 +146,33 @@ const Dashboard = () => {
                   open();
                 }
                 return (
-                  <div className="button-main" onClick={handleOnClick}>
-                    Upload an Image
+                  <div className={styles.uploadImage} onClick={handleOnClick}>
+                    <Image
+                      src="images/dashboard/upload.svg"
+                      width={30}
+                      height={30}
+                      alt="upload icon"
+                    />
+                    <span>{imgStatus}</span>
                   </div>
                 );
               }}
             </CldUploadWidget>
             {/* Upload image with Cloudinary end */}
             <textarea
+              required
               placeholder="Content"
               className={styles.textArea}
               cols="30"
               rows="10"
             ></textarea>
-            <p className={styles.statusMessage}>{status.message}</p>
+            <p
+              className={`message-status ${
+                !status.error ? 'success' : 'error'
+              }`}
+            >
+              {status.message}
+            </p>
             <button className={`button-main ' ' ${styles.buttonDashboard}`}>
               Create new post
             </button>
