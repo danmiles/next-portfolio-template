@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google';
-// import Navbar from '@/components/Navbar';
-// import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import '@/styles/globals.css';
 import { ThemeProvider } from '@/components/DarkModeToggle/ThemeContext';
 import AuthProvider from '@/components/AuthProvider';
@@ -18,9 +18,9 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <ThemeProvider>
           <AuthProvider>
-            {/* <Navbar /> */}
+            <Navbar />
             {children}
-            {/* <Footer /> */}
+            <Footer />
           </AuthProvider>
         </ThemeProvider>
       </body>
