@@ -7,6 +7,6 @@ export const metadata = {
     'Our portfolio page of JsCase. We create digital products for your business.',
 };
 
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
   return <>{children};</>;
 }

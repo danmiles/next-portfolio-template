@@ -16,13 +16,13 @@ const getData = (cat) => {
 };
 
 // Dinamicly generated SEO metadata from first post in category
-export async function generateMetadata({ params }) {
-  const post = await getData(params.category);
-  return {
-    title: post[0].title,
-    description: post[0].desc,
-  };
-}
+// export async function generateMetadata({ params }) {
+//   const post = await getData(params.category);
+//   return {
+//     title: post[0].title,
+//     description: post[0].desc,
+//   };
+// }
 
 const Category = ({ params }) => {
   const data = getData(params.category);
