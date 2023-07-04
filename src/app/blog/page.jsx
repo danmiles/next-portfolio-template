@@ -4,9 +4,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 async function getData() {
-  const res = await fetch('http://localhost:3000/api/posts', {
+  // Localhost
+  // const res = await fetch('http://localhost:3000/api/posts', {
+  //   cache: 'no-store',
+  // });
+  // Deploy
+  const res = await fetch('https://js-case-next-13.vercel.app/api/posts', {
     cache: 'no-store',
   });
+
 
   if (!res.ok) {
     throw new Error('Failed to fetch data');

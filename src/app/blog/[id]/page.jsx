@@ -4,7 +4,12 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
 async function getData(id) {
-  const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
+  // Localhost
+  // const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
+  //   cache: 'no-store',
+  // });
+  // Deploy
+  const res = await fetch(`https://js-case-next-13.vercel.app/api/posts/${id}`, {
     cache: 'no-store',
   });
 
