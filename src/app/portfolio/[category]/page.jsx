@@ -1,4 +1,4 @@
-import React from 'react';
+
 import styles from '@/styles/pages/portfolioCategory.module.css';
 import ButtonLink from '@/components/ButtonLink.jsx';
 import Image from 'next/image';

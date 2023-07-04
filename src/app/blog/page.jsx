@@ -1,4 +1,4 @@
-import React from 'react';
+
 import styles from '@/styles/pages/blog.module.css';
 import Link from 'next/link';
 import Image from 'next/image';

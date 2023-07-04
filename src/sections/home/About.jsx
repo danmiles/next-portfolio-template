@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+
 import styles from '@/styles/home-page/about.module.css';
 import Image from 'next/image';
 import { motion } from 'framer-motion';

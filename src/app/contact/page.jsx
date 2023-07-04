@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from '@/styles/pages/contactPage.module.css';
 import Image from 'next/image';
 import ButtonLink from '@/components/ButtonLink';
@@ -13,7 +12,7 @@ const Contact = () => {
   return (
     <section className={styles.contactPage}>
       <div className="container">
-        <h1 className={styles.title}>Let's Keep in Touch</h1>
+        <h1 className={styles.title}>Lets Keep in Touch</h1>
         <div className={styles.content}>
           <div className={styles.imgContainer}>
             <Image

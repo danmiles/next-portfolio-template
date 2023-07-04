@@ -1,4 +1,4 @@
-import React from 'react';
+
 import styles from '@/styles/pages/blogSingle.module.css';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';

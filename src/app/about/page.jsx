@@ -1,4 +1,4 @@
-import React from 'react';
+
 import styles from '@/styles/pages/aboutPage.module.css';
 import Image from 'next/image';
 import ButtonLink from '@/components/ButtonLink';
