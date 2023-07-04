@@ -53,6 +53,7 @@ const Hero = () => {
               width={600}
               height={600}
               className={styles.heroImage}
+              priority={true}
             />
           </motion.div>
         </div>

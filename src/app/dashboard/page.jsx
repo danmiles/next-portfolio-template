@@ -1,11 +1,14 @@
 'use client';
 import React, { useEffect, useState } from 'react';
+import { CldUploadWidget } from 'next-cloudinary';
 import useSWR from 'swr';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import styles from '@/styles/pages/dashboard.module.css';
 import Link from 'next/link';
+import { set } from 'mongoose';
+import { m } from 'framer-motion';
 
 const Dashboard = () => {
   //OLD WAY TO FETCH DATA
@@ -33,8 +36,16 @@ const Dashboard = () => {
   //   getData()
   // }, []);
 
+  // ================ NEW WAY TO FETCH DATA =================
+  const [resource, setResource] = useState();
+  const [imgtest, setImgtest] = useState();
+  const [status, setStatus] = useState({
+    message: '',
+    error: false,
+  });
+  console.log(resource?.secure_url);
+
   const session = useSession();
-  console.log(session);
 
   const router = useRouter();
 
@@ -65,24 +76,30 @@ const Dashboard = () => {
     e.preventDefault();
     const title = e.target[0].value;
     const desc = e.target[1].value;
-    const img = e.target[2].value;
-    const content = e.target[3].value;
+    const content = e.target[2].value;
 
-    try {
-      await fetch('/api/posts', {
-        method: 'POST',
-        body: JSON.stringify({
-          title,
-          desc,
-          img,
-          content,
-          username: session.data.user.name,
-        }),
-      });
-      mutate();
-      e.target.reset();
-    } catch (err) {
-      console.log(err);
+    if (resource !== undefined) {
+      try {
+        // need to post resource?.secure_url link to the database
+
+        await fetch('/api/posts', {
+          method: 'POST',
+          body: JSON.stringify({
+            title,
+            desc,
+            img: resource?.secure_url,
+            content,
+            username: session.data.user.name,
+          }),
+        });
+        mutate();
+        e.target.reset();
+        setStatus({ message: 'Your post has been created', error: false });
+      } catch (err) {
+        console.log(err);
+      }
+    } else {
+      setStatus({ message: 'Please upload an image', error: true });
     }
   };
 
@@ -92,6 +109,7 @@ const Dashboard = () => {
         method: 'DELETE',
       });
       mutate();
+      setStatus({ message: 'Your post has been deleted', error: false });
     } catch (err) {
       console.log(err);
     }
@@ -112,7 +130,13 @@ const Dashboard = () => {
                       key={post._id}
                     >
                       <div className={styles.imgContainer}>
-                        <Image className={styles.img} src={post.img} alt="" width={450} height={250} />
+                        <Image
+                          className={styles.img}
+                          src={post.img}
+                          alt=""
+                          width={450}
+                          height={250}
+                        />
                       </div>
                       <h2 className={styles.postTitle}>{post.title}</h2>
                     </Link>
@@ -130,17 +154,41 @@ const Dashboard = () => {
             <h1>Add New Post</h1>
             <input type="text" placeholder="Title" className={styles.input} />
             <input type="text" placeholder="Desc" className={styles.input} />
-            <input
+            {/* <input
               type="text"
               placeholder="Image (Cloudinary URL only)"
               className={styles.input}
-            />
+            /> */}
+
+            {/* Upload image with Cloudinary start */}
+            <CldUploadWidget
+              uploadPreset="upload-next-js"
+              onUpload={(result, widget) => {
+                setResource(result?.info);
+                widget.close();
+              }}
+            >
+              {({ open }) => {
+                function handleOnClick(e) {
+                  setResource(undefined);
+                  e.preventDefault();
+                  open();
+                }
+                return (
+                  <div className="button-main" onClick={handleOnClick}>
+                    Upload an Image
+                  </div>
+                );
+              }}
+            </CldUploadWidget>
+            {/* Upload image with Cloudinary end */}
             <textarea
               placeholder="Content"
               className={styles.textArea}
               cols="30"
               rows="10"
             ></textarea>
+            <p className={styles.statusMessage}>{status.message}</p>
             <button className={`button-main ' ' ${styles.buttonDashboard}`}>
               Create new post
             </button>
