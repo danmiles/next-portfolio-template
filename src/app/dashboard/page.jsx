@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { CldUploadWidget } from 'next-cloudinary';
 import useSWR from 'swr';
 import { useSession } from 'next-auth/react';
@@ -7,12 +7,10 @@ import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import styles from '@/styles/pages/dashboard.module.css';
 import Link from 'next/link';
-import { set } from 'mongoose';
-import { m } from 'framer-motion';
 
 const Dashboard = () => {
   const [resource, setResource] = useState();
-  const [imgStatus, setImgStatus] = useState('Upload Image');
+  const [imgStatus, setImgStatus] = useState('Upload an image (required)');
   const [status, setStatus] = useState({
     message: '',
     error: false,
@@ -68,7 +66,7 @@ const Dashboard = () => {
         mutate();
         e.target.reset();
         setStatus({ message: 'Your post has been created !', error: false });
-        setImgStatus('Upload Image');
+        setImgStatus('Upload an image (required)');
       } catch (err) {
         console.log(err);
       }
@@ -129,7 +127,7 @@ const Dashboard = () => {
             <input required type="text" placeholder="Title" className={styles.input} />
             <input required type="text" placeholder="Desc" className={styles.input} />
 
-            {/* Upload image with Cloudinary start */}
+            {/* Upload an image (required) with Cloudinary start */}
             <CldUploadWidget
               uploadPreset="upload-next-js"
               onUpload={(result, widget) => {
@@ -153,12 +151,12 @@ const Dashboard = () => {
                       height={30}
                       alt="upload icon"
                     />
-                    <span>{imgStatus}</span>
+                    <span className={styles.imgStatus}>{imgStatus}</span>
                   </div>
                 );
               }}
             </CldUploadWidget>
-            {/* Upload image with Cloudinary end */}
+            {/* Upload an image (required) with Cloudinary end */}
             <textarea
               required
               placeholder="Content"

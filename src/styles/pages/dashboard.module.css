@@ -64,22 +64,29 @@
   color: #bbb;
   font-size: 20px;
   font-weight: bold;
+  resize: vertical;
 }
 
 .uploadImage {
   display: flex;
-  max-width: 200px;
-  gap: 10px;
+  justify-content: center;
   align-items: center;
+  max-width: 300px;
+  gap: 10px;
   cursor: pointer;
+  padding: 5px;
+  background-color: #392f2f;
+  border: 2px solid var(--primary-color);
+}
+
+.imgStatus {
+  color: #bbbbbb;
 }
 
 .buttonDashboard {
   width: 180px;
   margin: 0 auto;
 }
-
-
 
 @media only screen and (max-width: 1300px) {
   .post {

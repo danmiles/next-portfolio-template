@@ -5,13 +5,14 @@
 
 .top {
   display: flex;
+  gap: 30px;
 }
 
 .info {
   flex: 1;
   display: flex;
+  gap: 20px;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .title{
@@ -48,4 +49,15 @@
   margin-top: 50px;
   font-size: 20px;
   text-align: justify;
+}
+
+@media only screen and (max-width: 992px) {
+  .top {
+    flex-direction: column;
+  }
+
+  .info, .imageContainer {
+    width: 100%;
+    flex: auto;
+  }
 }
