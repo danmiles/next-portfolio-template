@@ -27,6 +27,12 @@ body {
   scroll-behavior: smooth;
 }
 
+.local-layout {
+  background-color: var(--bg-color-dark);
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
 .theme{
   transition: 1s all ease;
 }

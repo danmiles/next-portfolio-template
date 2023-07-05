@@ -1,4 +1,3 @@
-
 export const metadata = {
   title: 'JsCase | Dashboard',
   description:
@@ -6,5 +5,5 @@ export const metadata = {
 };
 
 export default function Layout({ children }) {
-  return <>{children}</>;
+  return <div className="local-layout">{children}</div>;
 }
