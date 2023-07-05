@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import styles from '@styles/pages/dashboard.module.css';
 import Link from 'next/link';
+import Loading from '@components/Loading';
 
 const Dashboard = () => {
   const [resource, setResource] = useState();
@@ -29,15 +30,11 @@ const Dashboard = () => {
   );
   // Add special preloader (loading) for the first time when the page is loading
 
-  // if (session.status === 'loading') {
-  //   return (
-  //     <section className={styles.dashboard}>
-  //       <div className="container">
-  //         <p>Loading...</p>;
-  //       </div>
-  //     </section>
-  //   );
-  // }
+  if (session.status === 'loading') {
+    return (
+      <Loading />
+    );
+  }
 
   if (session.status === 'unauthenticated') {
     router?.push('/dashboard/login');
@@ -76,14 +73,17 @@ const Dashboard = () => {
   };
 
   const handleDelete = async (id) => {
-    try {
-      await fetch(`/api/posts/${id}`, {
-        method: 'DELETE',
-      });
-      mutate();
-      setStatus({ message: 'Your post has been deleted', error: false });
-    } catch (err) {
-      console.log(err);
+    const hasConfirmed = confirm('Are you sure you want to delete this post?');
+    if (hasConfirmed) {
+      try {
+        await fetch(`/api/posts/${id}`, {
+          method: 'DELETE',
+        });
+        mutate();
+        setStatus({ message: 'Your post has been deleted', error: false });
+      } catch (err) {
+        console.log(err);
+      }
     }
   };
 
@@ -93,7 +93,7 @@ const Dashboard = () => {
         <div className={styles.container}>
           <div className={styles.posts}>
             {isLoading
-              ? 'loading'
+              ? <Loading />
               : data?.map((post) => (
                   <div className={styles.post} key={post._id}>
                     <Link
@@ -124,8 +124,18 @@ const Dashboard = () => {
           </div>
           <form className={styles.new} onSubmit={handleSubmit}>
             <h1>Add New Post</h1>
-            <input required type="text" placeholder="Title" className={styles.input} />
-            <input required type="text" placeholder="Desc" className={styles.input} />
+            <input
+              required
+              type="text"
+              placeholder="Title"
+              className={styles.input}
+            />
+            <input
+              required
+              type="text"
+              placeholder="Desc"
+              className={styles.input}
+            />
 
             {/* Upload an image (required) with Cloudinary start */}
             <CldUploadWidget
