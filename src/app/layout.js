@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from '/src/components/Navbar';
+import Footer from '/src/components/Footer';
 import '@/styles/globals.css';
 import { ThemeProvider } from '@/components/DarkModeToggle/ThemeContext';
 import AuthProvider from '@/components/AuthProvider';
