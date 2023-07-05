@@ -1,3 +1,14 @@
+import React from 'react'
+
+const Blog = () => {
+  return (
+    <div>Blog</div>
+  )
+}
+
+export default Blog
+
+
 // 'use client';
 // import styles from '@styles/pages/blog.module.css';
 // import Link from 'next/link';

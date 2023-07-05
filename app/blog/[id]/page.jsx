@@ -1,4 +1,12 @@
+import React from 'react'
 
+const BlogPost = () => {
+  return (
+    <div>BlogPost</div>
+  )
+}
+
+export default BlogPost
 // import styles from '@styles/pages/blogSingle.module.css';
 // import Image from 'next/image';
 // import { notFound } from 'next/navigation';
