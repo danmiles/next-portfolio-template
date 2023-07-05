@@ -10,10 +10,13 @@ export const metadata = {
 
 async function getData() {
   // Localhost
+
   // const res = await fetch('http://localhost:3000/api/posts', {
   //   cache: 'no-store',
   // });
+
   // Deploy
+
   const res = await fetch('https://js-case-next-13.vercel.app/api/posts', {
     cache: 'no-store',
   });
