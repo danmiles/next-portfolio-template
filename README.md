@@ -1,3 +1,15 @@
+Url: (https://js-case-next-13.vercel.app/)
+
+# !!! You need to put your data in your .env file for this project to work
+MONGO_URI=your mongo uri, click connect on Cluster => Drivers => take link =>  and after put your password inside link without "<>" (dashboard.mongodb.com)
+GOOGLE_CLIENT_ID=your google client id (console.developers.google.com)
+GOOGLE_CLIENT_SECRET=your google client secret (console.developers.google.com)
+NEXTAUTH_SECRET=your next auth secret (https://next-auth.js.org/getting-started/example)
+NEXTAUTH_URL=your next auth url (http://localhost:3000) or (https://yourdomain.com)
+NEXTAUTH_URL_INTERNAL=your next auth url (http://localhost:3000) or (https://yourdomain.com)
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your cloudinary cloud name (https://cloudinary.com/)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
