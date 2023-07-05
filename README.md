@@ -1,6 +1,6 @@
 ## Url: https://js-case-next-13.vercel.app/
 
-## You need to put your data in your .env file for this project to work
+## If you want to use the project for your own purposes you need to put your data in your .env file for this project to work
 - MONGO_URI=your mongo uri, click connect on Cluster => Drivers => take link =>  and after put your password inside link without "<>" (dashboard.mongodb.com)
 - GOOGLE_CLIENT_ID=your google client id (console.developers.google.com)
 - GOOGLE_CLIENT_SECRET=your google client secret (console.developers.google.com)
@@ -12,7 +12,7 @@
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Getting Started 
 
 First, run the development server:
 
