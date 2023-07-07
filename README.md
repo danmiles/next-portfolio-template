@@ -13,14 +13,7 @@ Main important features:
 8. Next.js 13 + Framemotion animation (just for fun 😊). In future I will add more animation to this project.
 
 ## Additional Information
-- This project was created on the basis of a tutorial Next.js 13 by Lama Dev https://www.youtube.com/watch?v=VE8BkImUciY
-- But it has significant changes before the original version that I added myself:
-1. Added a new Home page with framemotion animation
-2. Added mobile menu
-3. CSS styles have been redesigned and adaptability to any device has been added.
-4. Added upload images to the cloudinary service for Dashboard panel (for create new post). It was very important for me to learn how to do this. In the original version, Form Input was used for this in which you simply entered the path to a local image or a link from the Internet. Which could lead to serious errors in the application (Next Image dont like String data without '/' 😊)
-5. Validation for deleting a post and much more that I have already redone.
-6. I spent quite a few hours posting this project on Vercel. On localhost:3000 everything worked fine, but when I sent the project to Vercel, many component imports began to give an error that it was not found. The whole problem is in the SRC folder when I deleted it and redid the jsconfig.json config a little, which largely fixed the problem. There were also a lot of minor issues with api/posts fetching data but this was fixed by temporarily commenting out those pages. After a successful Deploy, they worked properly. 
+1. I spent quite a few hours posting this project on Vercel. On localhost:3000 everything worked fine, but when I sent the project to Vercel, many component imports began to give an error that it was not found. The whole problem is in the SRC folder when I deleted it and redid the jsconfig.json config a little, which largely fixed the problem. There were also a lot of minor issues with api/posts fetching data but this was fixed by temporarily commenting out those pages. After a successful Deploy, they worked properly. 
 
 
 ## If you want to use the project for your own purposes you need to put your data in your .env file for this project to work
