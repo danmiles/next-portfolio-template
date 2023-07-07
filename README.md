@@ -8,9 +8,10 @@ Main important features:
 3. Next.js 13 Image Optimization
 4. Next.js 13 Font Optimization 
 5. Next.js 13 Image Upload to Cloudinary (Dashboard panel, create new post)
-6. Data fetching locally Portfolio folder from json files. Generate page dinamically using [category] folder.
+6. Data fetching locally Portfolio folder from Json files. Generate page dinamically using [category] folder.
 7. Next.js 13 SEO generate meta tags for each page automatically and manually.
 8. Next.js 13 + Framemotion animation (just for fun 😊). In future I will add more animation to this project.
+9. Post page with MongoDB database. Create, delete posts.
 
 ## Additional Information
 1. I spent quite a few hours posting this project on Vercel. On localhost:3000 everything worked fine, but when I sent the project to Vercel, many component imports began to give an error that it was not found. The whole problem is in the SRC folder when I deleted it and redid the jsconfig.json config a little, which largely fixed the problem. There were also a lot of minor issues with api/posts fetching data but this was fixed by temporarily commenting out those pages. After a successful Deploy, they worked properly. 
