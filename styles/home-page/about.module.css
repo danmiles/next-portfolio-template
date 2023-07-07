@@ -24,6 +24,9 @@
 .aboutImage {
   width: 100%;
   height: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: -81px 20px 135px 3px rgba(48, 181, 115, 0.5);
 }
 
 .subtitle {
@@ -52,12 +55,9 @@
   .content {
     gap: 50px;
   }
-
-
 }
 
-@media only screen and (max-width: 1270px) {  
-
+@media only screen and (max-width: 1270px) {
   .subtitle {
     font-size: 20px;
   }
@@ -102,4 +102,3 @@
     width: 100%;
   }
 }
-

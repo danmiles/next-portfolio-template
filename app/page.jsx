@@ -1,5 +1,6 @@
 import Hero from '@sections/home/Hero';
 import About from '@sections/home/About';
+import History from '@sections/home/History';
 
 export default function Home() {
   return (
@@ -8,6 +9,8 @@ export default function Home() {
       <Hero />
       {/* About section */}
       <About />
+      {/* History section */}
+      <History />
     </>
   );
 }
