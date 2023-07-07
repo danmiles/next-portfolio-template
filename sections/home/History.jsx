@@ -18,7 +18,7 @@ const History = () => {
       >
         <div className={styles.content}>
           <motion.div
-            variants={fadeIn('right', 'tween', 0.2, 1)}
+            variants={fadeIn('left', 'tween', 0.2, 1)}
             className={styles.left}
           >
             <TypingText stylesClass="section-title" text="| history Us" />
@@ -41,10 +41,10 @@ const History = () => {
             className={styles.right}
           >
             <Image
-              src="/images/home-page/history/our-history.webp"
+              src="/images/home-page/history/our-history.png"
               alt="our history image"
               width={700}
-              height={700}
+              height={500}
               className={styles.historyImage}
             />
           </motion.div>
