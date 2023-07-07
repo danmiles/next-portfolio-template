@@ -199,3 +199,10 @@ button {
   color: #17171e;
 }
 /* ======== button-main --- end ======== */
+
+/* ============= Global Classes Css start ============= */
+.bg-linear-gradient {
+  background: linear-gradient(180deg, var(--bg-color-dark) 0%, #0d2e41 100%); 
+}
+/* ============= Global Classes Css end ============= */
+
