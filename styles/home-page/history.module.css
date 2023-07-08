@@ -13,8 +13,6 @@
 
 .right {
   flex: 1 ;
-  width: 600px;
-  height: 400px;
 }
 
 .description {
@@ -23,6 +21,8 @@
   gap: 15px;
   margin-bottom: 50px;
 }
+
+
 
 .info {
   display: flex;
