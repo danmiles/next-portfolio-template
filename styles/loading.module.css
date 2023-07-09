@@ -1,14 +1,11 @@
 .container {
-  z-index: 10;
-  position: relative;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  height: 100%;
-  width: 100%;
-  min-height: 100vh;
-  min-width: 100vw;  
-  background-color: var(--bg-color);
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: var(--bg-color-dark);
 }
 
 @keyframes rotating {
@@ -22,9 +19,8 @@
 
 .image {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
-  bottom: 60%;
   animation: rotating 2s linear infinite;
 }
 

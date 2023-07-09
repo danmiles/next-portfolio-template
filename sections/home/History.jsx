@@ -13,7 +13,7 @@ const History = () => {
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
+        viewport={{ once: false, amount: 0.45 }}
         className="container"
       >
         <div className={styles.content}>

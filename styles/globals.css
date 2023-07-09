@@ -30,9 +30,16 @@ body {
 }
 
 .local-layout {
-  background-color: var(--bg-color-dark);
   min-height: 100vh;
   min-width: 100vw;
+}
+
+.dark .local-layout {
+  background-color: var(--bg-color-dark);
+}
+
+.light .local-layout {
+  background-color: #ececec;
 }
 
 .theme{
@@ -223,7 +230,7 @@ button {
 }
 
 .light .bg-linear-gradient {
-  background: linear-gradient(180deg, #3c2e2e 0%, #c82121 100%); 
+  background: linear-gradient(180deg, #f5f5f5 0%, #d9d9d9 100%); 
 }
 
 

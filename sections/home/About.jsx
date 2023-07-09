@@ -15,7 +15,7 @@ const About = () => {
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0.35 }}
+        viewport={{ once: false, amount: 0.45 }}
         className={styles.container}
       >
         <div className={styles.content}>
