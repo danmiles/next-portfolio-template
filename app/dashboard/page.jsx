@@ -46,6 +46,7 @@ const Dashboard = () => {
     const desc = e.target[1].value;
     const content = e.target[2].value;
 
+    // Check if user has uploaded an image
     if (resource !== undefined) {
       try {
         // need to post resource?.secure_url link to the database
