@@ -1,4 +1,5 @@
-![Alt Portfolio with Next.js 13](https://portfolio-denis-web.vercel.app/assets/img/portfolio/js-case-portfolio__next-13.webp)
+![Alt Portfolio with Next.js 13](https://portfolio-denis-web.vercel.app/assets/img/portfolio/small/js-case-portfolio__next-13-mobile.webp)
+
 ## Url: https://js-case-next-13.vercel.app/
 
 ## Description
