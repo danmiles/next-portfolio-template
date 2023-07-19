@@ -34,29 +34,6 @@ body {
   min-width: 100vw;
 }
 
-.dark .local-layout {
-  background-color: var(--bg-color-dark);
-}
-
-.light .local-layout {
-  background-color: #ececec;
-}
-
-.theme{
-  transition: 1s all ease;
-}
-
-.dark {
-  background-color: var(--bg-color-dark);
-  color: #bbbbbb;
-}
-
-.light {
-  background-color: #ececec;
-  color: #282424;
-}
-
-
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -141,33 +118,6 @@ div {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.dark a {
-  transition: var(--transition);
-  color: var(--link-color);
-  text-decoration: none;
-  cursor: pointer;
-  line-height: 1;
-}
-.dark a:hover {
-  color: var(--hover);
-  text-decoration: none;
-}
-
-
-.light a {
-  transition: var(--transition);
-  color: var(--link-color-2);
-  text-decoration: none;
-  cursor: pointer;
-  line-height: 1;
-}
-.light a:hover {
-  color: var(--hover-2);
-  text-decoration: none;
-}
-
-
-
 button {
   border: none;
   padding: 0;
@@ -224,7 +174,55 @@ button {
   background-color: #1e6a44;
 }
 
-/* ============= Global Classes Css start ============= */
+/* ============= Dark-Light mode start ============= */
+.dark .local-layout {
+  background-color: var(--bg-color-dark);
+}
+
+.light .local-layout {
+  background-color: #ececec;
+}
+
+.theme{
+  transition: 1s all ease;
+}
+
+.dark {
+  background-color: var(--bg-color-dark);
+  color: #bbbbbb;
+}
+
+.light {
+  background-color: #ececec;
+  color: #282424;
+}
+
+
+.dark a {
+  transition: var(--transition);
+  color: var(--link-color);
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 1;
+}
+.dark a:hover {
+  color: var(--hover);
+  text-decoration: none;
+}
+
+.light a {
+  transition: var(--transition);
+  color: var(--link-color-2);
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 1;
+}
+.light a:hover {
+  color: var(--hover-2);
+  text-decoration: none;
+}
+
+
 .dark .bg-linear-gradient {
   background: linear-gradient(180deg, var(--bg-color-dark) 0%, #0d2e41 100%); 
 }
@@ -234,5 +232,5 @@ button {
 }
 
 
-/* ============= Global Classes Css end ============= */
+/* ============= Dark-Light mode end ============= */
 
