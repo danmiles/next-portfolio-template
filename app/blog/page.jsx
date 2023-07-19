@@ -18,7 +18,7 @@ async function getData() {
   // Deploy
 
   const res = await fetch('https://js-case-next-13.vercel.app/api/posts', {
-    cache: 'no-store',
+    next: { revalidate: 60 },
   });
 
   if (!res.ok) {
